@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using _1.DAL.IReposi;
 using _1.DAL.Models;
-using _1.DAL.Migrations;
+
 namespace _1.DAL
 {
     public class SanPhamReposi : ISanPham

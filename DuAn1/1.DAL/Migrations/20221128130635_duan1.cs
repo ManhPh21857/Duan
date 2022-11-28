@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1.DAL.Migrations
 {
-    public partial class tet : Migration
+    public partial class duan1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,13 +26,13 @@ namespace _1.DAL.Migrations
                 name: "HangSP",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdHang = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     MaHang = table.Column<string>(type: "nvarchar(30)", nullable: false),
                     TenHang = table.Column<string>(type: "nvarchar(300)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HangSP", x => x.Id);
+                    table.PrimaryKey("PK_HangSP", x => x.IdHang);
                 });
 
             migrationBuilder.CreateTable(
@@ -157,7 +157,7 @@ namespace _1.DAL.Migrations
                         name: "FK_ChiTietSP_HangSP_IdHang",
                         column: x => x.IdHang,
                         principalTable: "HangSP",
-                        principalColumn: "Id",
+                        principalColumn: "IdHang",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ChiTietSP_LoaiSP_IdLoai",

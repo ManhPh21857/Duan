@@ -12,8 +12,8 @@ using _1.DAL.Models;
 namespace _1.DAL.Migrations
 {
     [DbContext(typeof(BanGiayDBContext))]
-    [Migration("20221124132723_ad")]
-    partial class ad
+    [Migration("20221128130635_duan1")]
+    partial class duan1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
