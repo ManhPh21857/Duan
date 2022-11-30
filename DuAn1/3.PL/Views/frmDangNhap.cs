@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace _3.PL.Views
 {
-    public partial class frmDangNhap : Form
+    public partial class FrmDangNhap : Form
     {
-        public frmDangNhap()
+        public FrmDangNhap()
         {
             InitializeComponent();
         }
-
-
     }
 }

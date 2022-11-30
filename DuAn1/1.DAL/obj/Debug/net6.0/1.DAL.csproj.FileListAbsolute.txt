@@ -26,17 +26,3 @@ C:\Users\ADMIN\Downloads\DuAn1\1.DAL\obj\Debug\net6.0\refint\1.DAL.dll
 C:\Users\ADMIN\Downloads\DuAn1\1.DAL\obj\Debug\net6.0\1.DAL.pdb
 C:\Users\ADMIN\Downloads\DuAn1\1.DAL\obj\Debug\net6.0\1.DAL.genruntimeconfig.cache
 C:\Users\ADMIN\Downloads\DuAn1\1.DAL\obj\Debug\net6.0\ref\1.DAL.dll
-E:\duan1\DuAn1\1.DAL\obj\Debug\net6.0\1.DAL.csproj.AssemblyReference.cache
-E:\duan1\DuAn1\1.DAL\obj\Debug\net6.0\1.DAL.GeneratedMSBuildEditorConfig.editorconfig
-E:\duan1\DuAn1\1.DAL\obj\Debug\net6.0\1.DAL.AssemblyInfoInputs.cache
-E:\duan1\DuAn1\1.DAL\obj\Debug\net6.0\1.DAL.AssemblyInfo.cs
-E:\duan1\DuAn1\1.DAL\obj\Debug\net6.0\1.DAL.csproj.CoreCompileInputs.cache
-E:\duan1\DuAn1\1.DAL\obj\Debug\net6.0\1.DAL.dll
-E:\duan1\DuAn1\1.DAL\obj\Debug\net6.0\refint\1.DAL.dll
-E:\duan1\DuAn1\1.DAL\obj\Debug\net6.0\1.DAL.pdb
-E:\duan1\DuAn1\1.DAL\bin\Debug\net6.0\1.DAL.deps.json
-E:\duan1\DuAn1\1.DAL\bin\Debug\net6.0\1.DAL.runtimeconfig.json
-E:\duan1\DuAn1\1.DAL\bin\Debug\net6.0\1.DAL.dll
-E:\duan1\DuAn1\1.DAL\bin\Debug\net6.0\1.DAL.pdb
-E:\duan1\DuAn1\1.DAL\obj\Debug\net6.0\1.DAL.genruntimeconfig.cache
-E:\duan1\DuAn1\1.DAL\obj\Debug\net6.0\ref\1.DAL.dll

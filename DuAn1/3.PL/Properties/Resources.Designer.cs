@@ -69,5 +69,15 @@ namespace _3.PL.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_shop_giay_dep1 {
+            get {
+                object obj = ResourceManager.GetObject("logo-shop-giay-dep1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
