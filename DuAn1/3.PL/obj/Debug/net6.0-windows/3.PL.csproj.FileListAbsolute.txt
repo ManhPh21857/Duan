@@ -109,6 +109,10 @@ I:\Dự án 1\DuAn1\3.PL\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProvi
 I:\Dự án 1\DuAn1\3.PL\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
 I:\Dự án 1\DuAn1\3.PL\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
 I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.Views.FrmChiTietSp.resources
-I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.Views.FrmKhachHang.resources
 I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.Properties.Resources.resources
 I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.Views.FrmDangNhap.resources
+I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.Views.FrmMauSac.resources
+I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.ViewsFrm.FrmLoaiSP.resources
+I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.ViewsFrm.FrmKhachHang1.resources
+I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.ViewData.FrmHangSp.resources
+I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.ViewsFrm.FrmKhuyenMai.resources
