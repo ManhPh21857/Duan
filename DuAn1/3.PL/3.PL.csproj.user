@@ -13,10 +13,16 @@
     <Compile Update="ViewsFrm\FrmLoaiSP.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmChiTietSp.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ViewsFrm\FrmMauSac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

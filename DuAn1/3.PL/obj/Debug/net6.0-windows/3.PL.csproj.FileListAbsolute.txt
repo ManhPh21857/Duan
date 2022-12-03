@@ -116,3 +116,7 @@ I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.ViewsFrm.FrmLoaiSP.resou
 I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.ViewsFrm.FrmKhachHang1.resources
 I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.ViewData.FrmHangSp.resources
 I:\Dự án 1\DuAn1\3.PL\obj\Debug\net6.0-windows\_3.PL.ViewsFrm.FrmKhuyenMai.resources
+D:\source code\duan01\DuAn1\3.PL\obj\Debug\net6.0-windows\3.PL.csproj.AssemblyReference.cache
+D:\source code\duan01\DuAn1\3.PL\obj\Debug\net6.0-windows\3.PL.dll
+D:\source code\duan01\DuAn1\3.PL\obj\Debug\net6.0-windows\refint\3.PL.dll
+D:\source code\duan01\DuAn1\3.PL\obj\Debug\net6.0-windows\3.PL.pdb
