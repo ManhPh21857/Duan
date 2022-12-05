@@ -2088,11 +2088,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Documents1\\DuAn1\\3.PL\\3.PL.csproj",
+      "projectUniqueName": "I:\\Dự án 1\\DuAn1\\3.PL\\3.PL.csproj",
       "projectName": "3.PL",
-      "projectPath": "C:\\Users\\ADMIN\\Documents1\\DuAn1\\3.PL\\3.PL.csproj",
+      "projectPath": "I:\\Dự án 1\\DuAn1\\3.PL\\3.PL.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Documents1\\DuAn1\\3.PL\\obj\\",
+      "outputPath": "I:\\Dự án 1\\DuAn1\\3.PL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2113,8 +2113,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\ADMIN\\Documents1\\DuAn1\\2.BUS\\2.BUS.csproj": {
-              "projectPath": "C:\\Users\\ADMIN\\Documents1\\DuAn1\\2.BUS\\2.BUS.csproj"
+            "I:\\Dự án 1\\DuAn1\\2.BUS\\2.BUS.csproj": {
+              "projectPath": "I:\\Dự án 1\\DuAn1\\2.BUS\\2.BUS.csproj"
             }
           }
         }

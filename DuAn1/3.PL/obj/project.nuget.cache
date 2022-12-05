@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FWZUQLwJDBu0kudTlaSdndel5+F4WobYq/C5omDfQhE+l+2agTz9elsDgPMAMQLBpL45WuIUceswnXX3LSgHZQ==",
+  "dgSpecHash": "MdK5hnT52zucyF6JKp9DRXB9HYKCS/zOtlhOgTfZ6cyL9aEen0rKqyiIh0ygKHn7R7xhxlVNoCKiDZhAN3W1iQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\Documents1\\DuAn1\\3.PL\\3.PL.csproj",
+  "projectFilePath": "I:\\Dự án 1\\DuAn1\\3.PL\\3.PL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\awssdk\\2.3.55.2\\awssdk.2.3.55.2.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
