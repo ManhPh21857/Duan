@@ -26,20 +26,30 @@ namespace _3.PL.Views
         {
             InitializeComponent();
             LoadtoData();
+            foreach(var item in _iChiTietSPService.GetAll())
+            {
+                cbb_ctsp.Items.Add(item.MaCTSP);
+            }
+            foreach (var item in _iGioHangService.GetAll())
+            {
+                cbb_giohang.Items.Add(item.Ma);
+            }
         }
         public void LoadtoData()
         {
-            dtg_Show.ColumnCount = 3;
+            dtg_Show.ColumnCount = 5;
             int stt = 1;
             dtg_Show.Columns[0].Name = "ID";
             dtg_Show.Columns[0].Visible = false;
-            dtg_Show.Columns[1].Name = "Đơn giá";
-            dtg_Show.Columns[2].Name = "Số lượng";
+            dtg_Show.Columns[1].Name = "Ma CTSP";
+            dtg_Show.Columns[2].Name = "Ma Gio hang";
+            dtg_Show.Columns[3].Name = "Đơn giá";
+            dtg_Show.Columns[4].Name = "Số lượng";
             dtg_Show.Rows.Clear();
-            var lst = _iGioHangCTService.GetAll();
+            var lst = _iGioHangCTService.GetAllViews();
             foreach (var item in lst)
             {
-                dtg_Show.Rows.Add(item.Id, stt++, item.DonGia, item.SoLuong);
+                dtg_Show.Rows.Add(item.GioHangCT.Id, stt++, item.CTSanPham.MaCTSP, item.GioHang.Ma,item.GioHangCT.DonGia,item.GioHangCT.SoLuong);
             }
         }
         public void ResetForm()
@@ -51,11 +61,10 @@ namespace _3.PL.Views
         }
         private void btn_them_Click(object sender, EventArgs e)
         {          
-            
-
-
             BangGioHangChiTiet item = new BangGioHangChiTiet()
             { 
+                IdCTSP = _iChiTietSPService.GetAll().FirstOrDefault(p=>p.MaCTSP == cbb_ctsp.Text).Id,
+                IdGioHang = _iGioHangService.GetAll().FirstOrDefault(p=>p.Ma == cbb_giohang.Text).Id,
                 DonGia = Convert.ToInt32(tb_dongia.Text),
                 SoLuong = Convert.ToInt32(tb_soluong.Text),               
             };
@@ -72,17 +81,27 @@ namespace _3.PL.Views
                 _GHCT = _iGioHangCTService.GetAll().FirstOrDefault(x => x.Id == Guid.Parse(r.Cells[0].Value.ToString()));
                 tb_dongia.Text = r.Cells[1].Value.ToString();
                 tb_soluong.Text = r.Cells[2].Value.ToString();
-
             }
         }
-
         private void btn_sua_Click(object sender, EventArgs e)
         {
-
+            BangGioHangChiTiet item = new BangGioHangChiTiet()
+            {
+                DonGia = Convert.ToInt32(tb_dongia.Text),
+                SoLuong = Convert.ToInt32(tb_soluong.Text),
+            };
+            _iGioHangCTService.Update(item);
+            MessageBox.Show("Thêm thành công");
+            LoadtoData();
         }
         private void btn_lammoi_Click(object sender, EventArgs e)
         {
            ResetForm();
+
+        }
+
+        private void cbb_giohang_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

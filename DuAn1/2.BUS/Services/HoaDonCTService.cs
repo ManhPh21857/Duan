@@ -35,13 +35,13 @@ namespace _2.BUS.Services
             return _iHoaDonCTReposi.GetAll();
         }
 
-        public List<HoaDonCTView> GetHoaDonCTfromDB()
+        public List<HoaDonCTView> GetAllView()
         {
             List<HoaDonCTView> lst = new List<HoaDonCTView>();
             lst = (from a in _iHoaDonCTReposi.GetAll()
                    join b in _iHoaDonReposi.GetAll() on a.IdHoaDon equals b.id
                    join c in _iKhuyenMaiReposi.GetAll() on a.IdHoaDon equals c.Id
-                   join d in _iCTSanPhamReposi.GetAll() on a.IdHoaDon equals d.Id 
+                   join d in _iCTSanPhamReposi.GetAll() on a.IdHoaDon equals d.Id
 
                    select new HoaDonCTView()
                    {
@@ -53,6 +53,7 @@ namespace _2.BUS.Services
             return lst;
         }
 
+        
         public bool Update(BangHoaDonCT obj)
         {
             _iHoaDonCTReposi.Update(obj);

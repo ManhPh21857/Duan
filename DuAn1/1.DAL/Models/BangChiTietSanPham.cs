@@ -13,6 +13,7 @@ namespace _1.DAL.Models
         public Guid IdLoai { get; set; }
         public Guid IdMauSac { get; set; }
         public Guid IdHang { get; set; }
+        public string MaCTSP { get; set; }
         public int Soluongton { get; set; }
         public string Mota { get; set; }
         public decimal GiaNhap { get; set; }

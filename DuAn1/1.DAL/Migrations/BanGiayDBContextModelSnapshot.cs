@@ -48,6 +48,10 @@ namespace _1.DAL.Migrations
                     b.Property<Guid>("IdSp")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("MaCTSP")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Mota")
                         .IsRequired()
                         .HasColumnType("nvarchar(300)")
@@ -374,6 +378,9 @@ namespace _1.DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<float>("GiamGia")
+                        .HasColumnType("real");
+
                     b.Property<string>("MaKM")
                         .IsRequired()
                         .HasColumnType("nvarchar(30)")
@@ -383,6 +390,15 @@ namespace _1.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(300)")
                         .HasColumnName("MotaKM");
+
+                    b.Property<DateTime>("NgayBatDau")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("NgyaKetThuc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TrangThai")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

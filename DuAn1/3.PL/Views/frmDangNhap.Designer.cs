@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txb_matkhau = new System.Windows.Forms.TextBox();
+            this.tb_matkhau = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txb_tendangnhap = new System.Windows.Forms.TextBox();
+            this.tb_tendangnhap = new System.Windows.Forms.TextBox();
             this.btn_dangnhap = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txb_matkhau
+            // tb_matkhau
             // 
-            this.txb_matkhau.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txb_matkhau.Location = new System.Drawing.Point(246, 253);
-            this.txb_matkhau.Name = "txb_matkhau";
-            this.txb_matkhau.Size = new System.Drawing.Size(300, 36);
-            this.txb_matkhau.TabIndex = 17;
+            this.tb_matkhau.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_matkhau.Location = new System.Drawing.Point(246, 253);
+            this.tb_matkhau.Name = "tb_matkhau";
+            this.tb_matkhau.Size = new System.Drawing.Size(300, 36);
+            this.tb_matkhau.TabIndex = 17;
             // 
             // label3
             // 
@@ -68,13 +68,13 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Tên đăng nhập";
             // 
-            // txb_tendangnhap
+            // tb_tendangnhap
             // 
-            this.txb_tendangnhap.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txb_tendangnhap.Location = new System.Drawing.Point(246, 179);
-            this.txb_tendangnhap.Name = "txb_tendangnhap";
-            this.txb_tendangnhap.Size = new System.Drawing.Size(300, 36);
-            this.txb_tendangnhap.TabIndex = 13;
+            this.tb_tendangnhap.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tb_tendangnhap.Location = new System.Drawing.Point(246, 179);
+            this.tb_tendangnhap.Name = "tb_tendangnhap";
+            this.tb_tendangnhap.Size = new System.Drawing.Size(300, 36);
+            this.tb_tendangnhap.TabIndex = 13;
             // 
             // btn_dangnhap
             // 
@@ -87,6 +87,7 @@
             this.btn_dangnhap.TabIndex = 12;
             this.btn_dangnhap.Text = "Đăng Nhập";
             this.btn_dangnhap.UseVisualStyleBackColor = false;
+            this.btn_dangnhap.Click += new System.EventHandler(this.btn_dangnhap_Click);
             // 
             // label2
             // 
@@ -124,10 +125,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(930, 512);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txb_matkhau);
+            this.Controls.Add(this.tb_matkhau);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txb_tendangnhap);
+            this.Controls.Add(this.tb_tendangnhap);
             this.Controls.Add(this.btn_dangnhap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -140,10 +141,10 @@
 
         #endregion
 
-        private TextBox txb_matkhau;
+        private TextBox tb_matkhau;
         private Label label3;
         private Label label4;
-        private TextBox txb_tendangnhap;
+        private TextBox tb_tendangnhap;
         private Button btn_dangnhap;
         private Label label2;
         private Label label1;

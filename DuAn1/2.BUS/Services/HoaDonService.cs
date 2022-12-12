@@ -40,22 +40,20 @@ namespace _2.BUS.Services
             return _iHoaDonReposi.GetAll();
         }
 
-        public List<HoaDonView> GetHoaDonfromDB()
+        public List<HoaDonView> GetAllView()
         {
             List<HoaDonView> lst = new List<HoaDonView>();
             lst = (from a in _iHoaDonReposi.GetAll()
                    join b in _iKhachHangReposi.GetAll() on a.IdKH equals b.Id
                    join c in _iNhanVienreposi.GetAll() on a.IdNV equals c.Id
-                   
+
                    select new HoaDonView()
                    {
                        HoaDon = a,
                        KhachHang = b,
-                       NhanVien = c,                      
+                       NhanVien = c,
                    }).ToList();
             return lst;
         }
-
-       
     }
 }

@@ -23,6 +23,7 @@ namespace _3.PL.ViewData
         public FrmHangSp()
         {
             InitializeComponent();
+            LoadToData();
         }
         public void LoadToData()
         {
@@ -69,6 +70,54 @@ namespace _3.PL.ViewData
                 _hangSpService.Add(item);
                 MessageBox.Show("Thêm thành công");
                 LoadToData();
+            }
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            if (_HSP == null)
+            {
+                MessageBox.Show("Vui lòng chọn màu sắc");
+            }
+            else
+            {
+                _hangSpService.Delete(_HSP);
+                MessageBox.Show("Xóa Loại thành công");
+                ResetFrm();
+            }
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            if (tb_mahang.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn khuyễn mãi");
+            }
+            else
+            {
+                if (_HSP.MaHang == tb_mahang.Text || (_HSP.MaHang != tb_mahang.Text && _hangSpService.GetAll().FirstOrDefault(x => x.MaHang == tb_mahang.Text) == null))
+                {
+                    _HSP.MaHang = tb_mahang.Text;
+                    _HSP.TenHang = tb_tenhang.Text;
+                    _hangSpService.Update(_HSP);
+                    MessageBox.Show("Sửa Khuyến Mại thành công");
+                    LoadToData();
+                }
+                else
+                {
+                    MessageBox.Show("Mã khuyến mại đã tồn tại");
+                }
+            }
+        }
+
+        private void dtg_show_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0)
+            {
+                DataGridViewRow dt = dtg_show.Rows[e.RowIndex];
+                _HSP = _hangSpService.GetAll().FirstOrDefault(p => p.IdHang == Guid.Parse(dt.Cells[0].Value.ToString()));
+                tb_mahang.Text = dt.Cells[3].Value.ToString();
+                tb_tenhang.Text = dt.Cells[2].Value.ToString();
             }
         }
     }

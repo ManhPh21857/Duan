@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using _1.DAL.Models;
-
+using _2.BUS.ViewModels;
 namespace _2.BUS.IService
 {
     public interface IHoaDonCTService
@@ -13,5 +13,6 @@ namespace _2.BUS.IService
         bool Update(BangHoaDonCT obj);
         bool Delete(BangHoaDonCT obj);
         List<BangHoaDonCT> GetAll();
+        List<HoaDonCTView> GetAllView();
     }
 }

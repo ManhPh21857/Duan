@@ -1,28 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="ViewsFrm\frmChucvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ViewsFrm\FrmGioHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ViewsFrm\FrmGioHangCT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ViewsFrm\FrmKhuyenMai.cs">
+    <Compile Update="ViewsFrm\FrmHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ViewsFrm\FrmChiTietSp.cs">
+    <Compile Update="ViewsFrm\FrmHoaDonCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ViewsFrm\FrmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmChiTietSp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ViewsFrm\FrmHangSp.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\FrmKhuyenMai1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ViewsFrm\FrmLoaiSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ViewsFrm\FrmSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ChiTietSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ChiTietSanPhamAsics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ChiTietSanPhamMizuno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ViewsFrm\FrmMauSac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\FrmThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

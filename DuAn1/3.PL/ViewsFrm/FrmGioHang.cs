@@ -27,26 +27,36 @@ namespace _3.PL.Views
         {
             InitializeComponent();
             LoadtoData();
+            foreach(var item in _iKhachHangService.GetAll())
+            {
+                cbb_khachhang.Items.Add(item.Ma);
+            }
+            foreach (var item in _iNhanVienService.GetAll())
+            {
+                cbb_nhanvien.Items.Add(item.Ma);
+            }
         }
         public void LoadtoData()
         {
-            dtg_Show.ColumnCount = 8;
+            dtg_Show.ColumnCount = 10;
             int stt = 1;
             dtg_Show.Columns[0].Name = "Id";
             dtg_Show.Columns[0].Visible = false;
             dtg_Show.Columns[1].Name = "Mã";
-            dtg_Show.Columns[2].Name = "Ngày tạo";
-            dtg_Show.Columns[3].Name = "Ngày thanh toán";
-            dtg_Show.Columns[4].Name = "Người nhận";
-            dtg_Show.Columns[5].Name = "Địa chỉ";
-            dtg_Show.Columns[6].Name = "SDT";
-            dtg_Show.Columns[7].Name = "Tình trạng";
-           
+            dtg_Show.Columns[2].Name = "Mã Nhân Viên";
+            dtg_Show.Columns[3].Name = "Ngày tạo";
+            dtg_Show.Columns[4].Name = "Người Nhận";
+            dtg_Show.Columns[5].Name = "Ngày thanh toán";
+            dtg_Show.Columns[6].Name = "Mã Khách hàng";
+            dtg_Show.Columns[7].Name = "Địa chỉ";
+            dtg_Show.Columns[8].Name = "SDT";
+            dtg_Show.Columns[9].Name = "Tình trạng";
+            
             dtg_Show.Rows.Clear();
-            var lst = _iGioHangService.GetAll();
+            var lst = _iGioHangService.GetAllViews();
             foreach(var item in lst)
             {
-                dtg_Show.Rows.Add(item.Ma, stt++, item.NgayTao.ToString(), item.NgayThanhToan.ToString(), item.NguoiNhan, item.DiaChi, item.SDT, item.TinhTrang == 1 ? "Thanh toán": "Chưa thanh toán") ;
+                dtg_Show.Rows.Add(item.GioHang.Id ,item.GioHang.Ma, item.NhanVien.Ma,item.GioHang.NgayTao, item.GioHang.NguoiNhan, item.GioHang.NgayThanhToan, item.KhachHang.Ma, item.GioHang.DiaChi, item.GioHang.SDT, item.GioHang.TinhTrang == 1 ? "Thanh toán": "Chưa thanh toán") ;
             }
         }
         public void resetForm()
@@ -54,9 +64,8 @@ namespace _3.PL.Views
             LoadtoData();
             _GH = null;
             tb_ma.Text = "";
-            tb_ngnhan.Text = "";
-            tb_diachi.Text = "";
-            tb_sdt.Text = "";
+            cbb_khachhang.Text = "";
+            tb_nguoinhan.Text = "";
             tb_diachi.Text = "";
             tb_sdt.Text = "";
             dtp_ngtao.Value = DateTime.Now;
@@ -88,9 +97,11 @@ namespace _3.PL.Views
                     Ma = tb_ma.Text,
                     NgayTao = dtp_ngtao.Value,
                     NgayThanhToan = dtp_ngtao.Value,
-                    NguoiNhan = tb_ngnhan.Text,                                 
+                    IdKH = _iKhachHangService.GetAll().FirstOrDefault(x => x.Ma == cbb_khachhang.Text).Id,
+                    IdNV = _iNhanVienService.GetAll().FirstOrDefault(x=>x.Ma == cbb_nhanvien.Text).Id,
+                    NguoiNhan = tb_nguoinhan.Text,
                     DiaChi = tb_diachi.Text,
-                    SDT = tb_sdt.Text,                                                     
+                    SDT = tb_sdt.Text,
                     TinhTrang = cb_tt.Checked ? 1 : 0,
                 };
                 _iGioHangService.Add(gh);
@@ -142,13 +153,15 @@ namespace _3.PL.Views
                 DataGridViewRow r = dtg_Show.Rows[e.RowIndex];
                 _GH= _iGioHangService.GetAll().FirstOrDefault(x => x.Id == Guid.Parse(r.Cells[0].Value.ToString()));
                 tb_ma.Text = _GH.Ma;
-                dtp_ngtao.Text = r.Cells[1].Value.ToString();
-                dtp_ngtt.Text = r.Cells[2].Value.ToString();
-                tb_ngnhan.Text = _GH.NguoiNhan;
+                dtp_ngtao.Text = r.Cells[3].Value.ToString();
+                dtp_ngtt.Text = r.Cells[5].Value.ToString();
+                cbb_khachhang.Text = _iKhachHangService.GetAll().FirstOrDefault(p => p.Id == _GH.IdKH).Ma;
+                cbb_nhanvien.Text = _iNhanVienService.GetAll().FirstOrDefault(p => p.Id == _GH.IdNV).Ma;
                 tb_diachi.Text = _GH.DiaChi;
                 tb_sdt.Text = _GH.SDT;
                 cb_tt.Checked = _GH.TinhTrang == 1;
                 cb_ctt.Checked = _GH.TinhTrang == 0;
+                tb_nguoinhan.Text = _GH.NguoiNhan;
             }
         }
 
@@ -157,10 +170,6 @@ namespace _3.PL.Views
             if (tb_ma.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập mã");
-            }
-            else if (_iGioHangService.GetAll().Any(x => x.Ma == tb_ma.Text))
-            {
-                MessageBox.Show("Mã đã tồn tại");
             }
             else if (!cb_tt.Checked && !cb_ctt.Checked)
             {
@@ -171,7 +180,9 @@ namespace _3.PL.Views
                 if (_GH.Ma == tb_ma.Text || (_GH.Ma != tb_ma.Text && _iGioHangService.GetAll().FirstOrDefault(x => x.Ma == tb_ma.Text) == null))
                 {
                     _GH.Ma = tb_ma.Text;
-                    _GH.NguoiNhan = tb_ngnhan.Text;
+                    _GH.NguoiNhan = tb_nguoinhan.Text;
+                    _GH.IdKH = _iKhachHangService.GetAll().FirstOrDefault(p=>p.Ma == cbb_khachhang.Text).Id;
+                    _GH.IdNV = _iNhanVienService.GetAll().FirstOrDefault(p => p.Ma == cbb_nhanvien.Text).Id;
                     _GH.NgayTao = dtp_ngtao.Value;
                     _GH.NgayThanhToan = dtp_ngtt.Value;
                     _GH.DiaChi = tb_diachi.Text;

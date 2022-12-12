@@ -38,7 +38,7 @@ namespace _2.BUS.Service
             _iGioHangCTRepository.Update(obj);
             return true;
         }
-        public List<GioHangCTView> GetAllView()
+        public List<GioHangCTView> GetAllViews()
         {
             List<GioHangCTView> lst = new List<GioHangCTView>();
             lst = (from a in _iGioHangCTRepository.GetAll()

@@ -41,18 +41,20 @@ namespace _2.BUS.Service
             _iGioHangRepository.Update(obj);
             return true;
         }
-        public List<GioHangView> GetAllView()
+
+        public List<GioHangView> GetAllViews()
         {
-           List<GioHangView> lst = new List<GioHangView>();
-            lst = (from a in _iGioHangRepository.GetAll() join b in _iKhachHangRepository.GetAll() on a.IdKH equals b.Id join c in _iNhanVienRepository.GetAll() on a.IdNV equals c.Id 
-               select new GioHangView()
-               {
-                   GioHang = a ,
-                   KhachHang = b,
-                   NhanVien = c
-               }    ).ToList();
+            List<GioHangView> lst = new List<GioHangView>();
+            lst = (from a in _iGioHangRepository.GetAll()
+                   join b in _iKhachHangRepository.GetAll() on a.IdKH equals b.Id
+                   join c in _iNhanVienRepository.GetAll() on a.IdNV equals c.Id
+                   select new GioHangView()
+                   {
+                       GioHang = a,
+                       KhachHang = b,
+                       NhanVien = c
+                   }).ToList();
             return lst;
         }
-
     }
 }
